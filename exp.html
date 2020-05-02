@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>www.facebook.com</title>
+        <script >
+            function pass()
+            {
+                var a = document.getElementById("ps1");
+                var b = document.getElementById("ps2");
+                var c = document.getElementById("nm");
+                var d = document.getElementById("num");
+                if(c.value=="")
+                {
+                    alert("please enter the username ");
+                    return false;
+                }
+                else if(a.value==""||b.value=="")
+                {
+                    alert("please fill and confirm password");
+                    return false;
+                }
+                else if(a.value != b.value)
+                {
+                    alert("password is not matched");
+                    return false;
+                }
+                else if(d.value=="")
+                {
+                    alert("please enter number");
+                    return false;
+                }
+                else if(d.value.length<=5)
+                {
+                    alert("please enter full and valid number");
+                    return false;
+
+                }
+            return true;
+            }
+        </script>
+</head>
+    <body>
+        <style>
+            body {
+              background-image: url('b.jpg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: 100% 100%;
+            }
+            </style>
+        <center>
+            <br>
+            <form onsubmit = "pass()" action = "wel.html" >
+            <input type=email id="nm" placeholder="enter username"  >
+            <br>
+            <br>
+            <input type=password id="ps1" placeholder="enter password" >
+            <br>
+            <br>
+            <input type=password id="ps2" placeholder="re-enter the password">
+            <br>
+            <br>
+            <input type="number" id="num" placeholder="cell-number">
+            <br>
+            <br>
+            <input type = "radio" name = "gender" value="male"  >male<br>
+            <input type = "radio" name = "gender" value="female" >female<br>
+            <button type ="submit" >login</button>
+            </form>
+        </center>
+    </body>
+</html>
