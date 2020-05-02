@@ -1,20 +1,37 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>sample</title>
-        <script >
-            function pass()
-            {
-                alert("hellow!");
-            }
-        </script>
-    </head>
-    <body>
-            <br>
-            <onclick button ="pass()">
-            <br>
-            <br>
-            <input type = "radio" name = "gender" value="male"  >male<br>
-            <input type = "radio" name = "gender" value="female" >female<br>
-            <button>login</button>
-    </body>
+    <title>greetings!</title>
+<body>
+<center>
+<p>you dont have any manerse ! </p>
+<br>
+<button onclick="greetme()">greet me!</button>
+</center>
+<!-------------------------------------------------------------------->
+<script>
+function  greetme() 
+{
+    var d = new Date();//first take whole date time in variable
+    var h = d.getHours();//then extract what ever you whant in other variable
+    var m = d.getMinutes();
+    if(h<12)
+    {
+        alert("good morning ! :->"+h+":"+m);
+    }
+    else if(h<18)
+    {
+        alert("good afternoon ! :->"+h+":"+m);
+    }
+    else if(h<21)
+    {
+        alert("good evening ! :->"+h+":"+m);
+    }
+    else if (h<24)
+    {
+        alert("good night ! :"+h+":"+m);
+    }
+}
+</script>
+
+</body>
 </html>
